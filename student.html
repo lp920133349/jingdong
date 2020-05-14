@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/student.css">
+		<script src="js/jquery-3.3.1.min.js"></script>
+	</head>
+	<body>
+		<div class="mainContent">
+			<div class="headline fl">
+				<div class="logoBox">
+					<img src="img/headLogo.png" alt="">
+					<span>
+						咸宁市人力资源社会保障局<br>
+						咸宁市劳动就业管理局
+					</span>
+				</div>
+				<span class="newTime">2020/04/06 16:50</span>
+			</div>
+			<div class="videoWindow fl">
+				<div class="signInBox" style="display: block;">
+					<div class="signTitle">签到</div>
+					<div class="signPic"><img src="img/title.png" alt=""></div>
+					<div class="signBtn">立即签到！</div>
+				</div>
+				<div class="classroomTesting" style="display: block;">
+					<div class="signTitle">课堂测试</div>
+					<div class="selectingContent">
+						<dl>
+							<dt>1、Java语言中，只限子类或者同一包中的类的方法能访问的访问权限是（ ）</dt>
+							<dd>A、public</dd>
+							<dd>B、public</dd>
+							<dd>C、public</dd>
+							<dd>D、public</dd>
+						</dl>
+					</div>
+					<div class="subBtn">提交</div>
+				</div>
+
+				<!-- 弹出倒计时框 -->
+				<!-- <div class="modalBox1" style="display: none;">
+					<div class="testBox1">
+						<div class="testTitle"><span>倒计时</span></div>
+						<div class="countDown">
+						
+						</div>
+					</div>
+				</div> -->
+
+			</div>
+			<div class="studentList fl">
+				<div class="teacherShow">
+					<div class="teacherVideo"></div>
+				</div>
+				<div class="studentTitle">
+					<img src="img/studentTitle.png" alt=""><span>学员列表</span>
+				</div>
+				<div class="listMain">
+					<table class="studentMessage">
+						<thead>
+							<tr>
+								<th>学员</th>
+								<th>考勤</th>
+								<th>课堂</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>王大壮</td>
+								<td><img src="img/checkon.png" alt=""></td>
+								<td><img src="img/error.png" alt=""></td>
+							</tr>
+							<tr>
+								<td>王大壮</td>
+								<td><img src="img/checkoff.png" alt=""></td>
+								<td><img src="img/right.png" alt=""></td>
+							</tr>
+							<tr>
+								<td>王大壮</td>
+								<td><img src="img/checkon.png" alt=""></td>
+								<td><img src="img/unanswer.png" alt=""></td>
+							</tr>
+							<tr>
+								<td>王大壮</td>
+								<td><img src="img/checkon.png" alt=""></td>
+								<td><img src="img/right.png" alt=""></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function() {
+				$('.selectingContent>dl>dd').on('click', function() {
+					$('.selectingContent>dl>dd').removeClass('selected');
+					$(this).addClass('selected');
+				});
+				// $('#check').on('click',function(){   
+				//    var num = 120;
+				//    $('.modalBox1').show();	
+				//    time = setInterval(function(){
+				// 	   $('.countDown').text(num);
+				// 	   if(num==-1){
+				// 	   	$('.modalBox1').hide();	
+				// 		 clearInterval(time);
+				// 	   } 
+				// 	   num--;
+				//    },1000);   
+				// });	  
+			});
+		</script>
+	</body>
+</html>
