@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>举报线索核查</title>
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/index1.css">
+		<script src="../js/jquery-3.3.1.min.js"></script>
+	</head>
+	<body>
+		<div class="containerBox">
+			<div class="systemTitle">APP不良信息投诉反馈系统</div>
+			<div class="mainBox">
+				<div class="paperBox">
+					<div class="headTitle">
+						<span>举报线索核查 <img src="../img/line.png" alt=""></span>
+					</div>
+					<div class="level">
+						<span>应用基本信息</span>
+						<img class="uploadBtn" src="../img/upload.png" alt="">
+					</div>
+					<div class="tableBox">
+						<table>
+							<tbody>
+								<tr>
+									<td colspan="3">
+										<div class="tabTitle">西瓜影视</div>
+									</td>
+								</tr>
+								<tr>
+									<td rowspan="5">
+										<div class="tabTitle">举报线索<br>详情</div>
+									</td>
+									<td>
+										<div class="tabText">编号</div>
+									</td>
+									<td>
+										<div class="tabText">2003210609846192</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="tabText">举报时间</div>
+									</td>
+									<td>
+										<div class="tabText">2020-03-21</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="tabText">有害信息大类</div>
+									</td>
+									<td>
+										<div class="tabText">色情类</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="tabText">举报下载链接</div>
+									</td>
+									<td>
+										<div class="tabText">https://m.newasp.net</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="tabText">举报内容</div>
+									</td>
+									<td>
+										<div class="tabText">内含大量热情电影视频</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="tabTitle">被举报<br>APP<br>LOGO</div>
+									</td>
+									<td colspan="2">
+										<div class="logoPic">
+												<ul>
+													<li class="appPic" style="width: 176px;height: 176px;">
+														<span class="uploadText">LOGO点击上传</span>
+														<input type="file" class="chooseImage">
+														<img src="" class="cropedBigImg" alt="">
+														<img src="../img/delectBtn.png" class="delectBtn1" alt="">
+													</li>
+												</ul>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="tabTitle">开发企业</div>
+									</td>
+									<td colspan="2">
+										<div class="tabText"><input type="text" value='未知'></div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="tabTitle">官方网站</div>
+									</td>
+									<td colspan="2">
+										<div class="tabText"><input type="text" value='未知'></div>
+									</td>
+								</tr>
+								<tr>
+									<td rowspan="2">
+										<div class="tabTitle">举报线索<br>核实情况</div>
+									</td>
+									<td>
+										<div class="tabText highlight">举报线索是否属实</div>
+									</td>
+									<td>
+										<div class="tabText highlight"><input type="text" value='是'></div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="tabText highlight">问题概述</div>
+									</td>
+									<td colspan="2">
+										<div class="tabText highlight"><input type="text" value='确认该APP设置禁片栏目，内有包含大量色情类违法违规视频内容 '></div>
+									</td>
+								</tr>
+								<tr>
+									<td rowspan="3">
+										<div class="tabTitle">下载链接<br>情况</div>
+									</td>
+									<td>
+										<div class="tabText">下载链接归属地</div>
+									</td>
+									<td>
+										<div class="tabText"><input type="text" value='湖北（网站主页：https://www.newasp.net/）'></div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="tabText">网站主体</div>
+									</td>
+									<td colspan="2">
+										<div class="tabText"><input type="text" value='武汉新云网讯科技有限公司'></div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="tabText">网站备案号</div>
+									</td>
+									<td colspan="2">
+										<div class="tabText"><input type="text" value='鄂ICP备16016745号-1'></div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="tabTitle">下载链接<br>情况</div>
+									</td>
+									<td colspan="2">
+										<div class="tabText">
+											<textarea name="" id="" cols="30" rows="10">通知网站主办者删除有害APP下载链接，并对网站内容进行全面核查整改</textarea>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="level" style="margin-top: 40px;">
+						<span>有害信息取证</span>
+					</div>
+					<div class="addBox" id="addBtn">添加</div>
+					<div class="harmful-message">
+					
+						
+					</div>
+					<div class="saveBtn">
+						<button>保存</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			var demo = true;
+			$('#addBtn').on('click',function(){
+				var num = $('.harmful-message').find('ul').length;
+				if(num<10){
+					var html = '<ul class="showBox">'
+						html+='<li class="appPic">'
+						html+='<span class="uploadText">点击上传</span>'
+						html+='<input type="file" class="chooseImage">'
+						html+='<img src="" class="cropedBigImg" alt="">'
+						html+='<img src="../img/delectBtn.png" class="delectBtn" alt="">'
+						html+='</li>'
+						html+='<li class="appText">冬瓜影视APP</li>'
+					    html+='</ul>'
+					$('.harmful-message').append(html);		
+				}else{
+					alert('上传图片不能超过10张');
+				}
+			});
+			
+			$('body').on('change','.chooseImage', function() { //当chooseImage的值改变时，执行此函数
+				var filePath = $(this).val(), //获取到input的value，里面是文件的路径
+					fileFormat = filePath.substring(filePath.lastIndexOf(".")).toLowerCase(),
+					src = window.URL.createObjectURL(this.files[0]); //转成可以在本地预览的格式
+				// 检查是否是图片
+				if (!fileFormat.match(/.png|.jpg|.jpeg/)) {
+					error_prompt_alert('上传错误,文件格式必须为：png/jpg/jpeg');
+					return;
+				} else {
+					// $('#cropedBigImg').css('display','block');
+					$(this).parent('.appPic').find('.cropedBigImg').attr('src', src);
+					$(this).parent('.appPic').find('.uploadText').css('display', 'none');
+				}
+			});
+
+			$('body').on('click','.delectBtn', function() {
+				$(this).parents('.showBox').remove();
+			});
+			
+			$('body').on('click','.delectBtn1', function() {
+				$(this).parent('.appPic').find('.cropedBigImg').attr('src', '');
+				$('.uploadText').css('display','block');
+			});
+		</script>
+	</body>
+</html>
